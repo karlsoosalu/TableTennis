@@ -1,0 +1,257 @@
+.root{
+    b_color: #66fdff;
+    sb_color: #b0dbae;
+    main_text_color: #031169;
+    control_color: #d1d6d5;
+    title_color: #0a9f4b;
+    -fx-background-color: linear-gradient(from 25% 100% to 100% 25%, b_color, main_text_color);
+}
+
+#startbutton1, #startbutton2{
+    -fx-background-color:
+            #ecebe9,
+            rgba(0,0,0,0.05),
+            linear-gradient(#dcca8a, #c7a740),
+            linear-gradient(#f9f2d6 0%, #f4e5bc 20%, #e6c75d 80%, #e2c045 100%),
+            linear-gradient(#f6ebbe, #e6c34d);
+    -fx-font-family: "Helvetica";
+    -fx-font-size: 18px;
+    -fx-text-fill: #311c09;
+    -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.1) , 2, 0.0 , 0 , 1);
+}
+#startbutton1, #startbutton2 Text {
+    -fx-effect: dropshadow( one-pass-box , rgba(255,255,255,0.5) , 0, 0.0 , 0 , 1);
+}
+
+#startbutton1:hover,#startbutton2:hover, #score1:hover,#score2:hover{
+    -fx-background-color: #8b6939;
+}
+
+#serv1,#serv2 {
+    -fx-border-radius: 80;
+}
+
+#score1,#score2{
+    -fx-background-color:
+            #ecebe9,
+            rgba(0,0,0,0.05),
+            linear-gradient(#dcca8a, #c7a740),
+            linear-gradient(#f9f2d6 0%, #f4e5bc 20%, #e6c75d 80%, #e2c045 100%),
+            linear-gradient(#f6ebbe, #e6c34d);
+    -fx-font-family: "Helvetica";
+    -fx-font-size: 150px;
+    -fx-text-fill: #ff0100;
+    -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.1) , 2, 0.0 , 0 , 1);
+}
+#score1,#score2 Text {
+    -fx-effect: dropshadow( one-pass-box , rgba(255,255,255,0.5) , 0, 0.0 , 0 , 1);
+}
+
+#stack1, #stack2, #stack3, #stack4,#stack5, #stack6,#stack7, #stack8, #stack9, #stack10,#stack11, #stack12, #stack13, #stack14,#stack15, #stack16,#stack17, #stack18, #stack19, #stack20,#stack21, #stack22{
+    -fx-background-color:#e6c34d;
+}
+
+.table-view {
+    -fx-base: #ec91ff;
+    -fx-control-inner-background: control_color;
+    -fx-background-color: sb_color;
+    -fx-table-cell-border-color: sb_color;
+    -fx-table-header-border-color: transparent;
+    -fx-padding: 0;
+}
+
+.text-field{
+    -fx-background-color: control_color;
+    -fx-background-radius: 0;
+    -fx-text-fill: main_text_color;
+    -fx-text-alignment: CENTER-RIGHT;
+}
+
+.text-field:focused{
+    -fx-background-color: b_color;
+    -fx-background-radius: 0;
+}
+
+.split-pane .split-pane-divider  {
+    -fx-border-color: title_color;
+    -fx-background-insets: 0;
+    -fx-pref-width: 1
+}
+
+.table-row-cell .table-cell {
+    -fx-border-width: 0px;
+}
+
+.table-row-cell:empty {
+    -fx-background-color: sb_color;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: control_color;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-size: 35;
+    -fx-border-width: 2 2 2 2;
+    -fx-background-color: transparent;
+    -fx-border-color:
+            title_color
+            title_color
+            title_color
+            title_color;
+    -fx-border-insets: 1 1 1 1;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: main_text_color;
+    -fx-alignment: center-left;
+}
+
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: -fx-focus-color;
+}
+
+.table-view .placeholder {
+    -fx-background-color: sb_color;
+}
+
+.table-row-cell .text {
+    -fx-fill: main_text_color ;
+    -fx-alignment: CENTER-RIGHT;
+}
+
+
+
+/*
+ *
+ * TabPane
+ */
+
+.tab-pane > .tab-header-area > .headers-region > .tab:selected:top {
+    -fx-background-color: b_color;
+    -fx-border-color:title_color;
+}
+
+.tab-pane > .tab-header-area > .headers-region > .tab:hover:top {
+    -fx-background-color: b_color;
+}
+
+.tab-pane > .tab-header-area > .headers-region > .tab:top {
+    -fx-background-color: control_color;
+}
+
+.tab-pane > .tab-header-area > .headers-region > .tab > .tab-container > .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: main_text_color;
+    -fx-font-weight: bold;
+}
+
+.tab-pane > .tab-header-area > .headers-region > .tab:selected > .tab-container > .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: main_text_color;
+    -fx-font-weight: bold;
+}
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-opacity: 1;
+    -fx-background-color: title_color
+}
+
+.tab-pane
+{
+    -fx-tab-min-width:50px;
+    -fx-background-color: b_color;
+    -fx-text-fill: main_text_color;
+}
+
+.tab{
+    -fx-background-insets: 0 1 0 1,0,0;
+    -fx-background-color: control_color;
+    -fx-color: control_color;
+    -fx-text-fill: main_text_color;
+}
+
+.tab-pane .tab
+{
+    -fx-background-color: control_color;
+    -fx-border-color:title_color;
+}
+
+.tab-pane .tab:selected
+{
+    -fx-background-color: b_color;
+}
+
+.tab-pane .tab:hover
+{
+    -fx-background-color: b_color;
+}
+
+   .choice-box .context-menu { -fx-background-color: #8b8b8b; }
+
+   .choice-box .menu-item:focused { -fx-background-color: orange; }
+
+   .choice-box .menu-item > .label { -fx-text-fill: white; }
+
+   .choice-box .menu-item:focused > .label { -fx-text-fill: #8b8b8b; }
+
+.choice-box {
+    -fx-background-color: #8b8b8b;
+    -fx-mark-color: orange; // arrow color
+}
+
+   .choice-box > .label { -fx-text-fill: white; }
+/*.button {
+    -fx-padding: 5 22 5 22;
+    -fx-border-color: title_color;
+    -fx-border-width: 2;
+    -fx-border-insets: 1;
+
+    -fx-background-radius: 0.5;
+
+    -fx-background-color: control_color;
+
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+
+}
+
+.button:hover{
+    -fx-background-color: #3a3a3a;
+}
+
+
+.button:focused
+{
+    -fx-background-color: control_color;
+    -fx-border-radius: 0, 0;
+}
+
+.button:disabled, .button:default:disabled
+{
+    -fx-opacity: 0.4;
+    -fx-background-color: #1d1d1d;
+    -fx-text-fill: white;
+}
+
+.button:default
+{
+    -fx-background-color: #008287;
+    -fx-text-fill: #ffffff;
+}
+
+.button:default:hover{
+    -fx-background-color: #219297;
+}
+
+#deletetionbutton1 #deletionbutton2 #deletetionbutton3 #deletetionbutton4 #deletetionbutton5 #deletetionbutton6 {
+    -fx-text-fill: #ff0100;
+    -fx-font-size: 33;
+}*/
+
+#stack1 #stack2 #stack3{
+    -fx-background-color: #90ffc5;
+}
+
+.pane{
+    -fx-background-color: #90ffc5;
+}
